@@ -117,6 +117,7 @@ public class ChromeSocketsUdp extends CordovaPlugin {
       sockets.put(Integer.valueOf(socket.getSocketId()), socket);
       callbackContext.success(socket.getSocketId());
     } catch (IOException e) {
+        Log.e(LOG_TAG, "CREATE UDP SOCKET ERROR"+ e);
     }
   }
 
